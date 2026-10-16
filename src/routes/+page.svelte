@@ -88,23 +88,21 @@
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://toodue.com/" />
+  <meta property="og:image" content="https://toodue.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta
+    property="og:image:alt"
+    content="TooDue's Today view with sample tasks, next to the tagline: A fast, open-source to-do app you can self-host."
+  />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://toodue.com/og-image.png" />
   <link rel="canonical" href="https://toodue.com/" />
 </svelte:head>
 
 <header class="nav">
-  <a class="brand" href="/">
-    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
-      <rect x="2" y="2" width="20" height="20" rx="6" fill="#38bdf8" />
-      <path
-        d="M7 12.5l3.2 3.2L17 9"
-        stroke="#0b1120"
-        stroke-width="2.6"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </svg>
-    TooDue
+  <a class="brand" href="/" aria-label="TooDue home">
+    <img class="brand-logo" src="/toodue-logo.svg" alt="TooDue" width="44" height="44" />
   </a>
   <nav>
     <a href="#features">Features</a>
@@ -112,6 +110,7 @@
     <a href="#faq">FAQ</a>
     <a class="btn btn-ghost" href={app}>Log in</a>
     <a class="btn btn-primary" href={app}>Sign up free</a>
+    <a href="https://docs.toodue.com">API docs</a>
   </nav>
 </header>
 
@@ -232,7 +231,7 @@
 <footer>
   <p>
     <strong>TooDue</strong> — get things done, not managed.
-    <a href={app}>Open the app</a> · <a href="https://github.com/djedi/toodue">GitHub</a>
+    <a href={app}>Open the app</a> · <a href="https://docs.toodue.com">API docs</a> · <a href="https://github.com/djedi/toodue">GitHub</a>
   </p>
   <p class="fine">© 2026 TooDue. Built with Rust, Svelte, and an unreasonable love of task lists.</p>
 </footer>
@@ -249,14 +248,24 @@
   }
 
   .brand {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 0.55rem;
-    font-weight: 800;
-    font-size: 1.25rem;
-    letter-spacing: -0.03em;
     color: var(--text);
     text-decoration: none;
+  }
+
+  .brand-logo {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    object-fit: contain;
+  }
+
+  @media (max-width: 640px) {
+    .brand-logo {
+      width: 3.25rem;
+      height: 3.25rem;
+    }
   }
 
   .nav nav {
