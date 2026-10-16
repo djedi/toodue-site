@@ -88,6 +88,15 @@
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://toodue.com/" />
+  <meta property="og:image" content="https://toodue.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta
+    property="og:image:alt"
+    content="TooDue's Today view with sample tasks, next to the tagline: A fast, open-source to-do app you can self-host."
+  />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://toodue.com/og-image.png" />
   <link rel="canonical" href="https://toodue.com/" />
 </svelte:head>
 
