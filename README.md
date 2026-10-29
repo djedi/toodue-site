@@ -22,7 +22,7 @@ The site is static files behind Caddy on the `cheap` server:
 
 ```sh
 npm run build
-rsync -av --delete build/ dustin@108.181.221.120:~/sites/toodue-marketing/
+rsync -av --delete build/ dustin@172.82.74.120:~/sites/toodue-marketing/
 ```
 
 Caddy serves `~/sites/toodue-marketing` (mounted at `/home/sites/toodue-marketing`
