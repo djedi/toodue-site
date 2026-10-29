@@ -232,6 +232,7 @@
   <p>
     <strong>TooDue</strong> — get things done, not managed.
     <a href={app}>Open the app</a> · <a href="https://docs.toodue.com">API docs</a> · <a href="https://github.com/djedi/toodue">GitHub</a>
+    · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/support">Support</a>
   </p>
   <p class="fine">© 2026 TooDue. Built with Rust, Svelte, and an unreasonable love of task lists.</p>
 </footer>
